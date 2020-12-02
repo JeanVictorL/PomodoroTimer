@@ -5,12 +5,9 @@ var running = false
 var breaks = 0
 
 function setFormat() {
-    if (minutes < 10) {
-        nminutes = "0" + minutes
-    } else { nminutes = minutes }
-    if (seconds < 10) {
-        nseconds = "0" + seconds
-    } else { nseconds = seconds }
+    var nminutes = minutes.toString().padStart(2, 0)
+    var nseconds = seconds.toString().padStart(2, 0)
+
     document.getElementById("counter").innerHTML = nminutes + ":" + nseconds
 }
 
